@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>小貓回家記</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="title-container">
+    <div class="css-coin"></div>
+    <h1>小貓回家記</h1>
+    <div class="css-coin"></div>
+  </div>
+
+  <h2>吃完硬幣並逃離迷宮大冒險</h2>
+
+  <div class="fish-note">
+    吃到 <span class="fish-emoji">🐟</span> 會有神奇效果
+  </div>
+
+  <canvas id="game"></canvas>
+
+  <div class="info-panel">
+    <span id="coinCounter">金幣: 0 / 0</span>
+    <span>穿牆: <span id="throughWallStatus">關閉</span></span>
+    <span id="gameTimer">時間: 0s</span>
+  </div>
+
+  <div id="playerNameModal" class="message-modal">
+      <div class="modal-content">
+          <p>請輸入你的名字開始遊戲：</p>
+          <input type="text" id="playerNameInput" placeholder="玩家名稱" maxlength="20">
+          <button id="startGameButton" class="modal-button">開始遊戲</button>
+      </div>
+  </div>
+
+  <div id="messageModal" class="message-modal">
+    <div class="modal-content">
+      <p id="modalMessage"></p>
+      <button id="modalCloseButton" class="modal-button">再玩一次</button>
+    </div>
+  </div>
+
+  <div class="leaderboard-container">
+    <h2>排行榜</h2>
+    <table id="leaderboardTable">
+      <thead>
+        <tr>
+          <th>排名</th>
+          <th>名稱</th>
+          <th>分數</th>
+          <th>時間 (秒)</th>
+          <th>日期</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody">
+        </tbody>
+    </table>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
